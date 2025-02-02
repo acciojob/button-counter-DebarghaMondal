@@ -1,19 +1,21 @@
 
-import React,{useState} from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [input, setInput] = useState(0)
-  const handleClick =() => {
-    setInput(input+1);
+  const [count, setCount] = useState(0);
+  const counter = () => {
+    setCount(count + 1);
   }
   return (
     <div>
-        {/* Do not remove the main div */}
-    <p>Button Clicked {input} times </p>
-<button onClick={handleClick}> Click me</button>
+      {/* Do not remove the main div */}
+      <p>Button clicked {count} times</p>
+      <button onClick={counter}>Click me</button>
     </div>
   )
 }
 
-export default App
+
+
+export default App;
